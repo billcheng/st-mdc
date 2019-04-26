@@ -1,0 +1,30 @@
+{
+  "name": "st-mdc",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/ionic.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "scss": "npx node-sass src/theme.scss -o www --include-path node_modules",
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "@material/button": "^1.1.1",
+    "@material/icon-button": "^1.1.0",
+    "@material/textfield": "^1.1.1"
+  },
+  "devDependencies": {
+    "@stencil/core": "~0.16.2",
+    "@stencil/sass": "^0.1.1"
+  },
+  "license": "MIT"
+}

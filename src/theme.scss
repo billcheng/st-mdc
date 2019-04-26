@@ -1,0 +1,10 @@
+@import "@material/button/mdc-button";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/textfield/mdc-text-field";
+
+:root {
+    --mdc-theme-primary: #fcb8ab;
+    --mdc-theme-secondary: #feeae6;
+    --mdc-theme-on-primary: #fff;
+    --mdc-theme-on-secondary: #fff;
+  }
