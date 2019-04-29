@@ -1,0 +1,1 @@
+export type ButtonVariant = 'text' | 'outlined' | 'raised' | 'unelevated';

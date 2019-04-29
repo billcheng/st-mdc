@@ -1,1 +1,0 @@
-export type ButtonType = 'text' | 'outlined' | 'raised' | 'unelevated';

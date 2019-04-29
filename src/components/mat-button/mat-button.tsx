@@ -1,13 +1,13 @@
 import { Component, Element, Prop } from '@stencil/core';
 import { MDCRipple } from '@material/ripple';
-import { ButtonType } from '../../models/button-type';
+import { ButtonVariant } from '../../models/button-variant';
 
 @Component({
     tag: 'mat-button'
 })
 export class MatButton {
 
-    @Prop() type: ButtonType;
+    @Prop() variant: ButtonVariant;
     @Element() element: HTMLElement;
 
     componentDidLoad() {
@@ -20,7 +20,7 @@ export class MatButton {
 
     render() {
 
-        const classes = ['mdc-button', `mdc-button--${this.type || 'text'}`];
+        const classes = ['mdc-button', `mdc-button--${this.variant || 'text'}`];
 
         return (
             <button class={classes.join(' ')}><slot /></button>

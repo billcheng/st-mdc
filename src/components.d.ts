@@ -9,8 +9,8 @@ import '@stencil/core';
 
 
 import {
-  ButtonType,
-} from './models/button-type';
+  ButtonVariant,
+} from './models/button-variant';
 import {
   MatInputVariant,
 } from './models/mat-input-variant';
@@ -19,10 +19,10 @@ import {
 export namespace Components {
 
   interface MatButton {
-    'type': ButtonType;
+    'variant': ButtonVariant;
   }
   interface MatButtonAttributes extends StencilHTMLAttributes {
-    'type'?: ButtonType;
+    'variant'?: ButtonVariant;
   }
 
   interface MatIconButton {
