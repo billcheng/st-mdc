@@ -11,6 +11,9 @@ import '@stencil/core';
 import {
   ButtonType,
 } from './models/button-type';
+import {
+  MatInputVariant,
+} from './models/mat-input-variant';
 
 
 export namespace Components {
@@ -39,10 +42,12 @@ export namespace Components {
   interface MatInput {
     'hint': string;
     'placeholder': string;
+    'variant': MatInputVariant;
   }
   interface MatInputAttributes extends StencilHTMLAttributes {
     'hint'?: string;
     'placeholder'?: string;
+    'variant'?: MatInputVariant;
   }
 }
 
