@@ -25,6 +25,36 @@ export namespace Components {
     'variant'?: ButtonVariant;
   }
 
+  interface MatCardActions {}
+  interface MatCardActionsAttributes extends StencilHTMLAttributes {}
+
+  interface MatCardBody {
+    'mediaScale': 'square' | '16-9';
+    'mediaUrl': string;
+    'subtitle': string;
+    'title': string;
+  }
+  interface MatCardBodyAttributes extends StencilHTMLAttributes {
+    'mediaScale'?: 'square' | '16-9';
+    'mediaUrl'?: string;
+    'subtitle'?: string;
+    'title'?: string;
+  }
+
+  interface MatCard {
+    'variant': 'outlined' | 'basic';
+  }
+  interface MatCardAttributes extends StencilHTMLAttributes {
+    'variant'?: 'outlined' | 'basic';
+  }
+
+  interface MatCheckbox {
+    'checked'?: 'on' | 'off' | 1 | 0;
+  }
+  interface MatCheckboxAttributes extends StencilHTMLAttributes {
+    'checked'?: 'on' | 'off' | 1 | 0;
+  }
+
   interface MatIconButton {
     'ariaLabel': string;
     'icon': string;
@@ -54,6 +84,10 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'MatButton': Components.MatButton;
+    'MatCardActions': Components.MatCardActions;
+    'MatCardBody': Components.MatCardBody;
+    'MatCard': Components.MatCard;
+    'MatCheckbox': Components.MatCheckbox;
     'MatIconButton': Components.MatIconButton;
     'MatIcon': Components.MatIcon;
     'MatInput': Components.MatInput;
@@ -61,6 +95,10 @@ declare global {
 
   interface StencilIntrinsicElements {
     'mat-button': Components.MatButtonAttributes;
+    'mat-card-actions': Components.MatCardActionsAttributes;
+    'mat-card-body': Components.MatCardBodyAttributes;
+    'mat-card': Components.MatCardAttributes;
+    'mat-checkbox': Components.MatCheckboxAttributes;
     'mat-icon-button': Components.MatIconButtonAttributes;
     'mat-icon': Components.MatIconAttributes;
     'mat-input': Components.MatInputAttributes;
@@ -71,6 +109,30 @@ declare global {
   var HTMLMatButtonElement: {
     prototype: HTMLMatButtonElement;
     new (): HTMLMatButtonElement;
+  };
+
+  interface HTMLMatCardActionsElement extends Components.MatCardActions, HTMLStencilElement {}
+  var HTMLMatCardActionsElement: {
+    prototype: HTMLMatCardActionsElement;
+    new (): HTMLMatCardActionsElement;
+  };
+
+  interface HTMLMatCardBodyElement extends Components.MatCardBody, HTMLStencilElement {}
+  var HTMLMatCardBodyElement: {
+    prototype: HTMLMatCardBodyElement;
+    new (): HTMLMatCardBodyElement;
+  };
+
+  interface HTMLMatCardElement extends Components.MatCard, HTMLStencilElement {}
+  var HTMLMatCardElement: {
+    prototype: HTMLMatCardElement;
+    new (): HTMLMatCardElement;
+  };
+
+  interface HTMLMatCheckboxElement extends Components.MatCheckbox, HTMLStencilElement {}
+  var HTMLMatCheckboxElement: {
+    prototype: HTMLMatCheckboxElement;
+    new (): HTMLMatCheckboxElement;
   };
 
   interface HTMLMatIconButtonElement extends Components.MatIconButton, HTMLStencilElement {}
@@ -93,6 +155,10 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'mat-button': HTMLMatButtonElement
+    'mat-card-actions': HTMLMatCardActionsElement
+    'mat-card-body': HTMLMatCardBodyElement
+    'mat-card': HTMLMatCardElement
+    'mat-checkbox': HTMLMatCheckboxElement
     'mat-icon-button': HTMLMatIconButtonElement
     'mat-icon': HTMLMatIconElement
     'mat-input': HTMLMatInputElement
@@ -100,6 +166,10 @@ declare global {
 
   interface ElementTagNameMap {
     'mat-button': HTMLMatButtonElement;
+    'mat-card-actions': HTMLMatCardActionsElement;
+    'mat-card-body': HTMLMatCardBodyElement;
+    'mat-card': HTMLMatCardElement;
+    'mat-checkbox': HTMLMatCheckboxElement;
     'mat-icon-button': HTMLMatIconButtonElement;
     'mat-icon': HTMLMatIconElement;
     'mat-input': HTMLMatInputElement;

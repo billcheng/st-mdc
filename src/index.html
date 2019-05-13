@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
@@ -8,15 +9,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="custom.css">
 
   <script src="/build/mycomponent.js"></script>
 
 </head>
+
 <body>
 
   <mat-icon>favorite</mat-icon>
 
-  <mat-button variant="text"><mat-icon>favorite</mat-icon>Text</mat-button>
+  <mat-button variant="text">
+    <mat-icon>favorite</mat-icon>Text
+  </mat-button>
   <mat-button variant="outlined">Outlined</mat-button>
   <mat-button variant="raised">Raised</mat-button>
   <mat-button variant="unelevated">Unelevated</mat-button>
@@ -27,5 +32,24 @@
   <mat-input placeholder="Tell me" hint="Text"></mat-input>
   <mat-input placeholder="Tell me" hint="Text" variant="Outlined"></mat-input>
 
+  <mat-card>
+    <mat-card-body title="TITLE" subtitle="By Bill Cheng" media-scale="16-9"
+      media-url="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg">
+      Visit ten places on our planet that are undergoing the biggest changes today.
+    </mat-card-body>
+    <mat-card-actions>
+      <div slot="buttons">
+        <mat-button>OK</mat-button>
+      </div>
+      <div slot="icons">
+        <mat-icon-button icon="share"></mat-icon-button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-checkbox checked="on">Checked</mat-checkbox>
+  <mat-checkbox checked={0}>Unchecked</mat-checkbox>
+
 </body>
+
 </html>
